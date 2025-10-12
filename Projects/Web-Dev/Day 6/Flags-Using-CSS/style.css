@@ -1,0 +1,167 @@
+body{
+    color:white;
+    background-color: black;
+}
+
+body > div { 
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.flag {
+  width: 300px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+.palau {
+  height: 187.5px;
+  background-color: #0085ca;
+  position: relative;
+}
+
+.palau > div {
+  height: 112.5px;
+  width: 112.5px;
+  background-color: #ffd100;
+  position: absolute;
+  margin-left: 75px;
+  margin-top: 12.5%;
+  border-radius: 50%;
+}
+
+.japan {
+  background-color: #ffffff;
+  position: relative;
+}
+
+.japan > div {
+    height:120px;
+    width:120px;
+    background-color: #BC002D;  
+    position: absolute;  
+    margin-left:30% ;
+    margin-top:40px;
+    border-radius: 50%;
+}
+
+.ukraine{
+    background-color: #0057B7;
+    position: relative;
+}
+
+.ukraine > div {
+    height: 100px;
+    width: 300px;
+    background-color: #FFD700;
+    position: absolute;
+    margin-top: 100px;
+}
+
+.latvia{
+    height: 150px;
+    background-color: #9D2235;
+    position: relative;
+}
+
+.latvia > div { 
+    height: 30px;
+    width:300px;
+    background-color: #FFFFFF;
+    position: absolute;
+    margin-top: 60px;
+}
+
+.nigeria{
+    height: 150px;
+    background-color: #008751;
+    position: relative;
+}
+
+.nigeria > div {
+    height: 150px;
+    width: 100px;
+    background-color: #FFFFFF;
+    position: absolute;
+    margin-left: 100px;
+}
+
+.peru{
+    background-color: #D91023;
+    position: relative;
+}
+
+.peru > div { 
+    height: 200px;
+    width: 100px;
+    background-color: #FFFFFF;
+    position: absolute;
+    margin-left: 100px;
+}
+
+.poland { 
+    background-color: #DC143C;
+    position: relative;
+}
+
+.poland > div { 
+    height: 100px;
+    width: 300px;
+    background-color: #FFFFFF;
+    position: absolute;
+}
+
+.monaco {
+    background-color: #CE1126;
+    position: relative;
+    width: 250px;
+}
+
+.monaco > div {
+    height: 100px;
+    width: 250px;
+    background-color: #FFFFFF;
+    margin-top: 100px;
+    position: absolute;
+}
+
+.indonesia {
+    background-color: #FF0000	;
+    position: relative;
+}
+
+.indonesia > div {
+    height: 100px;
+    width: 300px;
+    background-color: #FFFFFF;
+    margin-top: 100px;
+    position: absolute;
+}
+
+.austria{
+    background-color: #C8102E;
+    position: relative;
+}
+
+.austria > div { 
+    height: 66.66px;
+    width:300px;
+    background-color: #FFFFFF;
+    position: absolute;
+    margin-top: 66.66px;
+}
+
+.bangladesh{
+    height: 180px;
+    background-color: #006A4E;
+}
+
+.bangladesh > div {
+    height: 120px;
+    width: 120px;
+    background-color: #F42A41;
+    margin-top: 30px;
+    margin-left: 75px;
+    border-radius: 50%;
+}
