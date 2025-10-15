@@ -1,3 +1,5 @@
+import os
+
 print(r"""
  _____________________
 |  _________________  |
@@ -37,52 +39,29 @@ operations = {
 }
 
 def calculator():
-    while True:
-        print("SIMPLE MENU-DRIVEN CALCULATOR")
-        print("1. New Calculation")
-        print("2. Exit")
-        choice = input("Enter your choice (1/2): ")
+    should_accumulate = True
+    first_number = float(input("What is the first number? "))
 
-        if choice == "2":
-            print("Aya hi kyu bhai??")
-            break
-        elif choice == "1":
-            first_number = float(input("What is the first number? "))
+    while should_accumulate:
+        print(*operations)
 
-            while True:
-                print("Available operations:")
-                for symbol in operations:
-                    print(*symbol)
-                print()
+        operation_loop = True
+        operation_symbol = input("Select an operation to perform: ")
+        if operation_symbol not in operations:
+            print("Invalid Operation!")
+            continue
 
-                op_symbol = input("What is the operation? ")
-                if op_symbol not in operations:
-                    print("Invalid operation. Try again.")
-                    continue
+        second_number = float(input("What is the second number? "))
+        answer = operations[operation_symbol](first_number, second_number)
+        print(f"{first_number} {operation_symbol} {second_number} = {answer}")
 
-                second_number = float(input("What is the second number: "))
-                operation_function = operations[op_symbol]
-                result = operation_function(first_number, second_number)
+        choice = input(f" Type 'y' to continue with {answer} OR type 'n' to start a new calculation")
 
-                print(f"{first_number} {op_symbol} {second_number} = {result}")
-
-                print("Next Step..")
-                print("1. Continue with result")
-                print("2. Start new calculation")
-                print("3. Exit")
-                next_choice = input("Enter your choice: ")
-
-                if next_choice == "1":
-                    first_number = result
-                elif next_choice == "2":
-                    break
-                elif next_choice == "3":
-                    print("Bye!")
-                    return
-                else:
-                    print("Invalid Input!")
-                    break
+        if choice == "y":
+            first_number = answer
         else:
-            print("Invalid Input!")
+            should_accumulate = False
+            os.system('cls') # clearing screen for new calculation
+            calculator() # recursion
 
 calculator()
